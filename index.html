@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>webcam</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="hii">
+        <video id="video" autoplay></video>
+        <button class="btn" onclick="openCamera()">Open Your Web Cam</button>
+    </div>
+    <script>
+        async function openCamera(){
+            const stream = await navigator.mediaDevices.getUserMedia({video:true});
+            video.srcObject =stream;
+        }
+    </script>
+</body>
+</html>
